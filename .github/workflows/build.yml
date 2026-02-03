@@ -32,7 +32,7 @@ jobs:
         run: bash build.sh
       
       - name: Upload macOS artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: macos-build
           path: dist/*.dmg
@@ -67,7 +67,7 @@ jobs:
             app.py
       
       - name: Upload Windows artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: windows-build
           path: dist/*.exe
@@ -106,7 +106,7 @@ jobs:
             app.py
       
       - name: Upload Linux artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: linux-build
           path: dist/MD5Tool
@@ -120,7 +120,7 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: Download all artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
       
       - name: Create Release
         uses: softprops/action-gh-release@v1
